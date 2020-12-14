@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Callum Xmas Card</title>
+</head>
+<body>
+    <div id="grid-container">
+        <div class="grid-imgs-box" id="grid-img-1">
+            <img src="fortnite-2.png" alt="" class="grid-img" id="One">
+        </div>
+        <div class="grid-imgs-box" id="grid-img-2">
+            <img src="fortnite-3.png" alt="" class="grid-img" id="Two">
+        </div>
+        <div class="grid-imgs-box" id="grid-img-3">
+            <img src="fortnite-4.png" alt="" class="grid-img" id="Three">
+        </div>
+        <div class="grid-imgs-box" id="grid-img-4">
+            <img src="fortnite-4.png" alt="" class="grid-img" id="Four">
+        </div>
+        <div class="grid-imgs-box" id="grid-img-5">
+            <img src="fortnite-3.png" alt="" class="grid-img" id="Five">
+        </div>
+        <div class="grid-imgs-box" id="grid-img-6">
+            <img src="fortnite-2.png" alt="" class="grid-img" id="Six">
+        </div>
+    </div>
+    <div id="card-container">
+        <div id="card">
+            <span id="text">Happy Christmas Callum</span>
+            <button id="btn" onclick="myFunction()">Click Me!</button>
+            <div class="hide" id="bucks">vBucks: </div>
+            <div class="hide" id="code">&$%@RANDOM*&@$</div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            let text = document.getElementById("text");
+            let btn = document.getElementById("btn");
+            let code = document.getElementById("code");
+            let bucks = document.getElementById("bucks");
+            text.style.visibility = "hidden";
+            btn.style.visibility = "hidden";
+            code.style.opacity = "1";
+            bucks.style.opacity = "1";
+        }
+    </script>
+</body>
+</html>
