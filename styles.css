@@ -130,10 +130,21 @@ button:hover {
 }
 
 #bucks {
+    position: absolute;
+    top: 2rem;
     opacity: 0;
     color: #FFF;
-    margin-bottom: 9rem;
     text-decoration: underline;
+}
+
+#text2 {
+    position: absolute;
+    bottom: 3rem;
+    color: #FFF;
+    font-family: cursive, sans-serif;
+    font-size: 28px;
+    opacity: 0;
+    transition: 2.5s;
 }
 
 /*** The animation code ***/
