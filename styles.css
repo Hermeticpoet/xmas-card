@@ -198,4 +198,12 @@ button:hover {
     #text {
         font-size: 24px;
     }
+
+    #text2 {
+        display: none;
+    }
+
+    #code {
+        font-size: 34px !important;
+    }
 }
