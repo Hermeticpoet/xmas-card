@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <title>Callum Xmas Card</title>
 </head>
 <body>
@@ -29,10 +30,9 @@
     </div>
     <div id="card-container">
         <div id="card">
-            <span id="text">Happy Christmas Callum</span>
+            <div id="text">Happy Christmas Callum</div>
             <button id="btn" onclick="myFunction()">Click Me!</button>
-            <div class="hide" id="bucks">vBucks: </div>
-            <div class="hide" id="code">&$%@RANDOM*&@$</div>
+            <div class="hide" id="code"></div>
             <div class="hide" id="text2">Enjoy Your Gaming Callum...</div>
         </div>
     </div>
@@ -42,13 +42,37 @@
             let text = document.getElementById("text");
             let btn = document.getElementById("btn");
             let code = document.getElementById("code");
-            let bucks = document.getElementById("bucks");
             let text2 = document.getElementById("text2");
             text.style.visibility = "hidden";
             btn.style.visibility = "hidden";
             code.style.opacity = "1";
-            bucks.style.opacity = "1";
             text2.style.opacity = "1";
+
+            let str = "£20 vBucks For You";
+            let res = str.split("");
+
+            for (let i = 0; i < res.length; i++) {
+                let elem = document.createElement("span");
+                elem.textContent = res[i];
+                document.querySelector("#code").appendChild(elem);
+            }
+
+            function initBanner() {
+
+            var tl = gsap.timeline({
+                repeat: 1
+            });
+
+            var words = document.querySelectorAll("span");
+            // console.log(words);
+
+
+            tl
+                .fromTo(words, { autoAlpha: 0, top: 0, left: 0 }, { duration: 0.3, autoAlpha: 1, top: 20, left: 20, stagger: "0.05" })
+                .fromTo(words, { color: 'black', fontSize: 42 }, { duration: 0.2, color: 'white', fontSize: 50, stagger: "0.05" }, '-=0.05')
+            }
+
+            initBanner();
         }
     </script>
 </body>

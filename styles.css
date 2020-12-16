@@ -119,23 +119,17 @@ button:hover {
     box-shadow: 2px 5px #FFF;
 }
 
-#code, #bucks {
+#code {
     position: absolute;
+    top: 4rem;
     opacity: 0;
-    font-size: 48px;
     font-weight: bold;
+    font-family: cursive, sans-serif;
     align-self: center;
     justify-self: center;
     transition: 1.5s;
 }
 
-#bucks {
-    position: absolute;
-    top: 2rem;
-    opacity: 0;
-    color: #FFF;
-    text-decoration: underline;
-}
 
 #text2 {
     position: absolute;
@@ -170,5 +164,38 @@ button:hover {
         transform: scale3d(1, 1, 10);
         color: #FFF;
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    #grid-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        border: 5px solid blueviolet;
+    }
+
+    .grid-imgs-box {
+        display: none;
+    }
+
+    #grid-img-4 {
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #card {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    #text {
+        font-size: 24px;
     }
 }
